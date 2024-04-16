@@ -71,7 +71,7 @@ namespace course
         }
         [ContextMenuItem("get a random scale", "executerandomscale")]
         public float randomscale;
-        private void executerandomscale()
+        private void Executerandomscale()
         {
             randomscale = Random.Range(0, 10f);
         }
@@ -79,7 +79,9 @@ namespace course
         
         #region AwakeStart  for getcomponent example
         private BoxCollider boxcollider;
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         private Rigidbody rigidbody;
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
 
         private void Awake()
         {
